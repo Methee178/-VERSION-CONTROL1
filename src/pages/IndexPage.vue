@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <div class="q-pa-md" style="max-width: 400px">
 
     <q-form
@@ -82,4 +83,17 @@ export default {
     }
   }
 }
+=======
+  <q-page class="flex flex-center">
+    <img
+      alt="Quasar logo"
+      src="~assets/quasar-logo-vertical.svg"
+      style="width: 200px; height: 200px"
+    >
+  </q-page>
+</template>
+
+<script setup>
+//
+>>>>>>> e86113a (1st project-quasar)
 </script>
