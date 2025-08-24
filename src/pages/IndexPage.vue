@@ -1,5 +1,5 @@
 <template>
-<<<<<<< HEAD
+
   <div class="q-pa-md" style="max-width: 400px">
 
     <q-form
@@ -20,11 +20,11 @@
         filled
         type="number"
         v-model="age"
-        label="Your age *"
+        label="อายุ: *"
         lazy-rules
         :rules="[
-          val => val !== null && val !== '' || 'Please type your age',
-          val => val > 0 && val < 100 || 'Please type a real age'
+          val => val !== null && val !== '' || 'กรุณาพิมพ์อายุของคุณ',
+          val => val > 0 && val < 100 || 'กรุณาใส่อายุที่ถูกต้อง'
         ]"
       />
 
@@ -83,7 +83,7 @@ export default {
     }
   }
 }
-=======
+
   <q-page class="flex flex-center">
     <img
       alt="Quasar logo"
@@ -95,5 +95,5 @@ export default {
 
 <script setup>
 //
->>>>>>> e86113a (1st project-quasar)
+
 </script>
