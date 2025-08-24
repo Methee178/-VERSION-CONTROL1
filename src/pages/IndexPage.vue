@@ -1,5 +1,8 @@
 <template>
 
+
+
+
   <div class="q-pa-md" style="max-width: 400px">
 
     <q-form
@@ -10,29 +13,49 @@
       <q-input
         filled
         v-model="name"
+
         label="Your name *"
         hint="Name and surname"
         lazy-rules
         :rules="[ val => val && val.length > 0 || 'Please type something']"
+
+        label="ชื่อ นามสกุล *"
+        hint="กรุณาใส่ชื่อชื่อนามสกุล"
+        lazy-rules
+        :rules="[ val => val && val.length > 0 || 'โปรดใส่ข้อความที่ถุกต้อง']"
+
       />
 
       <q-input
         filled
         type="number"
         v-model="age"
+
         label="อายุ: *"
         lazy-rules
         :rules="[
           val => val !== null && val !== '' || 'กรุณาพิมพ์อายุของคุณนะครับ',
           val => val > 0 && val < 100 || 'กรุณาใส่อายุที่ถูกต้องนะจ๊ะ'
+
+        label="Your age *"
+        lazy-rules
+        :rules="[
+          val => val !== null && val !== '' || 'Please type your age',
+          val => val > 0 && val < 100 || 'Please type a real age'
+ thai-lang
         ]"
       />
 
       <q-toggle v-model="accept" label="I accept the license and terms" />
 
       <div>
+
         <q-btn label="Submit" type="submit" color="primary"/>
         <q-btn label="Reset" type="reset" color="primary" flat class="q-ml-sm" />
+
+        <q-btn label="ยืนยัน" type="submit" color="primary"/>
+        <q-btn label="เริ่มใหม่" type="reset" color="primary" flat class="q-ml-sm" />
+
       </div>
     </q-form>
 
@@ -84,6 +107,7 @@ export default {
   }
 }
 
+
   <q-page class="flex flex-center">
     <img
       alt="Quasar logo"
@@ -95,5 +119,7 @@ export default {
 
 <script setup>
 //
+
+
 
 </script>
